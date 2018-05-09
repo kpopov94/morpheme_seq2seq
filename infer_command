@@ -1,0 +1,10 @@
+python3 -m bin.infer \
+  --tasks "
+    - class: DecodeText" \
+  --model_dir %s \
+  --input_pipeline "
+    class: ParallelTextInputPipeline
+    params:
+      source_files:
+        - %s" \
+  > %s
