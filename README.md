@@ -7,9 +7,9 @@
 ## Usage
 To segment sample data in test.source into morphemes using default model run:
 ```bash
-python3 ./segment.py
+python3 segment.py
 ```
 To specify your own data and/or model run:
 ```bash
-python3 ./segment.py -s input_file -m model_dir -o output_file
+python3 segment.py -s input_file -m model_dir -o output_file
 ```
