@@ -2,14 +2,13 @@ from subprocess import call
 import os
 import argparse
 import logging
-
 def parse_file(words,model_dir,output_file,debug):
     with open(words) as inp, open('___test','w') as test:
         for line in inp:
             test.write(' '.join([c for c in line]))
     with open('./infer_command') as fcommand:
         command=fcommand.read() % (model_dir,'___test','___output')
-    call(command, stdout=open(os.devnull, "w"), stderr=open(os.devnull, "w"), shell=True)
+    call(command,  shell=True)
     with open('___output') as outpf:
         parsed=''
         for line in outpf:
