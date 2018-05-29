@@ -1,1 +1,45 @@
-{"model_class": "AttentionSeq2Seq", "model_params": {"attention.params": {"num_units": 256}, "optimizer.params": {"epsilon": 8e-07}, "encoder.params": {"rnn_cell": {"cell_params": {"num_units": 256}, "cell_class": "GRUCell", "dropout_input_keep_prob": 0.8, "dropout_output_keep_prob": 1.0, "num_layers": 1}}, "optimizer.learning_rate": 0.0001, "encoder.class": "seq2seq.encoders.BidirectionalRNNEncoder", "attention.class": "seq2seq.decoders.attention.AttentionLayerBahdanau", "decoder.params": {"rnn_cell": {"cell_params": {"num_units": 256}, "cell_class": "GRUCell", "dropout_input_keep_prob": 0.8, "dropout_output_keep_prob": 1.0, "num_layers": 2}}, "bridge.class": "seq2seq.models.bridges.ZeroBridge", "vocab_target": "/home/konstantin/Documents/Diplom/sets/set6/seq2seq/vocab.train.target", "embedding.dim": 256, "source.max_seq_len": 50, "vocab_source": "/home/konstantin/Documents/Diplom/sets/set6/seq2seq/vocab.train.source", "optimizer.name": "Adam", "source.reverse": false, "decoder.class": "seq2seq.decoders.AttentionDecoder", "target.max_seq_len": 50}}
+{
+  "model_class": "AttentionSeq2Seq",
+  "model_params": {
+    "attention.params": {
+      "num_units": 256
+    },
+    "optimizer.params": {
+      "epsilon": 8e-7
+    },
+    "encoder.params": {
+      "rnn_cell": {
+        "cell_params": {
+          "num_units": 256
+        },
+        "cell_class": "GRUCell",
+        "dropout_input_keep_prob": 0.8,
+        "dropout_output_keep_prob": 1,
+        "num_layers": 1
+      }
+    },
+    "optimizer.learning_rate": 0.0001,
+    "encoder.class": "seq2seq.encoders.BidirectionalRNNEncoder",
+    "attention.class": "seq2seq.decoders.attention.AttentionLayerBahdanau",
+    "decoder.params": {
+      "rnn_cell": {
+        "cell_params": {
+          "num_units": 256
+        },
+        "cell_class": "GRUCell",
+        "dropout_input_keep_prob": 0.8,
+        "dropout_output_keep_prob": 1,
+        "num_layers": 2
+      }
+    },
+    "bridge.class": "seq2seq.models.bridges.ZeroBridge",
+    "vocab_target": "./model/vocab.train.target",
+    "embedding.dim": 256,
+    "source.max_seq_len": 50,
+    "vocab_source": "./model/vocab.train.source",
+    "optimizer.name": "Adam",
+    "source.reverse": false,
+    "decoder.class": "seq2seq.decoders.AttentionDecoder",
+    "target.max_seq_len": 50
+  }
+}
