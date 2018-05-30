@@ -9,7 +9,7 @@ We recommend using Anaconda to work with dependencies. We didn't test our code o
 1. Download and install Anaconda with Python 3.6: https://www.anaconda.com/download
 2. Create new environment with Tensorflow 1.3
 ```
-conda create -n seq2seq tensorflow-gpu=1.3
+conda create -n seq2seq tensorflow=1.8
 source activate seq2seq
 ```
 3. Clone seq2seq repository, install.
