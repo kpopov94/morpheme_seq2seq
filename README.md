@@ -9,7 +9,7 @@ We recommend using Anaconda to work with dependencies. We didn't test our code o
 1. Download and install Anaconda with Python 3.6: https://www.anaconda.com/download
 2. Create new environment with Tensorflow 1.3
 ```
-conda create -n seq2seq tensorflow=1.3
+conda create -n seq2seq tensorflow=1.8
 source activate seq2seq
 ```
 3. Clone seq2seq repository, install.
@@ -33,7 +33,11 @@ from tensorflow.python.ops.distributions import categorical
 git clone https://github.com/nvanva/morpheme_seq2seq.git
 cd morpheme_seq2seq
 ```
-6. 
+6. Download model data.
+```
+wget "https://drive.google.com/uc?export=download&id=1z0I0AeJr8aG362txHO4fccX7kkdRwD2i" -O model.ckpt-100000.data-00000-of-00001
+```
+7. 
 
 
 ## Usage
