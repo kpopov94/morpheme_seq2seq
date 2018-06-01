@@ -46,7 +46,7 @@ cd morpheme_seq2seq
 
 
 ## Usage
-To segment a few word in slang.in using default model run:
+To segment a few words in slang.in using default model run:
 ```bash
 python3 segment.py -s slang.in -o slang.out
 ```
