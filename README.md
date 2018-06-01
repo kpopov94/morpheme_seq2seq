@@ -1,4 +1,10 @@
 # morpheme_seq2seq
+Morpheme Segmentation for the Russian language.
+
+If you use this code, please, cite the paper:
+Arefyev N.V., Gratsianova T.Y., Popov K.P. Morphological Segmentation with Sequence to Sequence Neural Network.  In Proceedings of the 24rd International Conference on Computational Linguistics and Intellectual Technologies (Dialogue’2018).
+
+
 ## Requirements
 * Python 3.6
 * Tensorflow 1.8.0
@@ -50,11 +56,13 @@ To segment a few words in slang.in using default model run:
 ```bash
 python3 segment.py -s slang.in -o slang.out
 ```
+This will take a few seconds.
 
 To segment 25K test words from test.source using default model run:
 ```bash
 python3 segment.py
 ```
+This will take 5-10 minutes.
 
 To specify your own data and/or model run:
 ```bash
