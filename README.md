@@ -1,4 +1,10 @@
 # morpheme_seq2seq
+Morpheme Segmentation for the Russian language.
+
+If you use this code, please, cite the paper:
+Arefyev N.V., Gratsianova T.Y., Popov K.P. Morphological Segmentation with Sequence to Sequence Neural Network.  In Proceedings of the 24rd International Conference on Computational Linguistics and Intellectual Technologies (Dialogue’2018).
+
+
 ## Requirements
 * Python 3.6
 * Tensorflow 1.8.0
@@ -43,17 +49,23 @@ from tensorflow.python.ops.distributions import categorical
 git clone https://github.com/nvanva/morpheme_seq2seq.git
 cd morpheme_seq2seq
 ```
-6. Download model data.
-```
-wget "https://drive.google.com/uc?export=download&id=1z0I0AeJr8aG362txHO4fccX7kkdRwD2i" -O model/model.ckpt-100000.data-00000-of-00001
-```
+
 
 ## Usage
-To segment sample data in test.source into morphemes using default model run:
+To segment a few words in slang.in using default model run:
+```bash
+python3 segment.py -s slang.in -o slang.out
+```
+This will take a few seconds.
+
+To segment 25K test words from test.source using default model run:
 ```bash
 python3 segment.py
 ```
+This will take 5-10 minutes.
+
 To specify your own data and/or model run:
 ```bash
 python3 segment.py -s input_file -m model_dir -o output_file
 ```
+Data must be in compatible format (see test.source).
