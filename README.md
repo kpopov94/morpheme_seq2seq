@@ -46,10 +46,16 @@ cd morpheme_seq2seq
 
 
 ## Usage
-To segment sample data in test.source into morphemes using default model run:
+To segment a few word in slang.in using default model run:
+```bash
+python3 segment.py -s slang.in -o slang.out
+```
+
+To segment 25K test words from test.source using default model run:
 ```bash
 python3 segment.py
 ```
+
 To specify your own data and/or model run:
 ```bash
 python3 segment.py -s input_file -m model_dir -o output_file
