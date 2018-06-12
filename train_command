@@ -1,0 +1,24 @@
+python3 -m bin.train \
+  --config_paths="
+    %s,
+    %s" \
+  --model_params "
+    vocab_source: %s
+    vocab_target: %s" \
+  --input_pipeline_train "
+    class: ParallelTextInputPipeline
+    params:
+      source_files:
+        - %s
+      target_files:
+        - %s" \
+  --input_pipeline_dev "
+    class: ParallelTextInputPipeline
+    params:
+      source_files:
+        - %s
+      target_files:
+        - %s" \
+  --batch_size %s \
+  --train_steps %s \
+  --output_dir %s
